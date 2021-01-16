@@ -1,0 +1,471 @@
+/*********************
+Nama: Adnan Maulana
+NPM: 2019511041
+Kelas: B
+Prodi/Jurusan: Teknik Informatika
+
+Masih dalam percobaan bosqu
+**********************/
+@font-face {
+  font-family: Potta One;
+  src: url(/fonts/PottaOne.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background: #000000;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #fff;
+}
+
+h1 .page-title {
+}
+
+.nan-heading-one {
+  font-size: 30px;
+}
+
+.nan-heading-two {
+  font-size: 16px;
+  color: #ff9d84;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 20px 100px;
+  z-index: 1000;
+}
+
+header.sticky {
+  padding: 10px 100px;
+  background: #fff;
+}
+
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    url(/img/bg-banner.jpg);
+  background-size: cover;
+}
+
+.banner-title {
+  padding: 20px 25px;
+  margin: 80px 130px;
+}
+
+.banner-title p {
+  color: #fff;
+}
+
+.banner-title h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+header.sticky .logo {
+  color: #000;
+}
+
+header.sticky ul li a {
+  color: #000000;
+}
+
+.nan-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.nan-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+header.sticky .nan-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+header.sticky .nan-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.about-title {
+  margin-top: 50px;
+  color: #fff;
+  text-align: center;
+}
+.section {
+  padding: 50px 0;
+}
+.about {
+  height: 100vh;
+}
+
+.container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section h3 {
+  text-align: center;
+
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url(/img/bg-about.jpg);
+  background-size: cover;
+}
+
+.about p {
+  color: #fff;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.img_active {
+  width: 75%;
+  border-width: 4px;
+  border-radius: 500px;
+  padding: 4px;
+  border-style: solid;
+  border-top-color: #ff915f;
+  border-right-color: #ff915f;
+  border-bottom-color: #2b50b4;
+  border-left-color: #2b50b4;
+}
+
+.footer {
+  display: none;
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: #ffffff;
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgb(247, 104, 104);
+}
+
+.footer a:hover {
+  color: #fff;
+  transition: 0.3s;
+}
+.withhover h3 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* .withhover h3 {
+  color: #fff;
+
+  padding-left: 400px;
+  padding-right: 400px;
+}
+
+.withhover h3:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.withhover h3:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+*/
+
+.gallery {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url(/img/bg-gallery.jpg);
+  background-size: cover;
+  height: 140vh;
+}
+
+.button-nan {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-nan a {
+  text-decoration: none;
+  color: #000;
+  font-family: sans-serif;
+}
+
+.nan-link-laporan::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.nan-link-laporan:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+header.sticky .nan-link-laporan::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+header.sticky .nan-link-laporan:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url(/img/bg-gallery.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+
+h1.page-title {
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.linku a {
+  text-decoration: #fff;
+  color: #fff;
+}
+
+.linku a:hover {
+  color: #ff915f;
+  transition: 0.3s;
+}
+
+/*Test*/
+
+#myImg1,
+#myImg2,
+#myImg3,
+#myImg4,
+#myImg5,
+#myImg6 {
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#myImg1:hover,
+#myImg2:hover,
+#myImg3:hover,
+#myImg4:hover,
+#myImg5:hover,
+#myImg6:hover {
+  opacity: 0.7;
+}
+
+.footer-nan {
+  height: auto;
+  color: #fff;
+}
+
+.nan-h3 {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.bungkus-galeri {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  header.sticky {
+    padding: 10px;
+  }
+
+  .banner-title {
+    margin: auto;
+  }
+
+  .banner h1 {
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  header .logo {
+    font-size: 16px;
+  }
+
+  header ul {
+    display: none;
+  }
+  .container {
+    width: 90%;
+  }
+  header h1 {
+    text-align: center;
+    float: none;
+  }
+
+  .withhover h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  .img-nan {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  img.img_active {
+    width: 50%;
+    text-align: center;
+    margin: 0px;
+    padding: 2px;
+  }
+
+  .nan-h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .button-nan {
+    margin-top: 10px;
+  }
+
+  .nan-heading-one h1 {
+    font-size: 28px;
+  }
+
+  .nan-heading-two h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  .about .container {
+    padding-top: 5px;
+  }
+
+  .bungkus-galeri {
+    margin-top: 10px;
+  }
+
+  .gallery {
+    height: 330vh;
+  }
+
+  .footer-container {
+    display: none;
+  }
+}
